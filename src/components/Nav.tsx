@@ -1,32 +1,44 @@
 import { FiSun, FiMoon } from "react-icons/fi";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Nav() {
     const aboutRef = useRef<HTMLAnchorElement>(null);
     const projectsRef = useRef<HTMLAnchorElement>(null);
     const experienceRef = useRef<HTMLAnchorElement>(null);
     const documentElement: HTMLElement = document.documentElement;
+    const [dataTheme, setDataTheme] = useState(
+        localStorage.getItem("data-theme")
+            ? localStorage.getItem("data-theme")
+            : "light"
+    );
 
     const linkClicked = (event: React.FormEvent<HTMLAnchorElement>) => {
         event.preventDefault(); // prevent url from changing to '.../#id_name'
         if (aboutRef.current != null) {
-            aboutRef.current.scrollIntoView();
+            aboutRef.current.scrollIntoView(false);
         }
     };
 
     const toggleDarkMode = () => {
-        // add localstorage later
-        let mode: string | null = documentElement.getAttribute("data-theme");
+        let mode: string = "";
 
-        if (mode == "light") {
+        if (dataTheme == "light") {
             mode = "dark";
         } else {
             mode = "light";
         }
 
-        documentElement.setAttribute("data-theme", mode);
-        console.log(documentElement);
+        setDataTheme(mode); // update state
+        localStorage.setItem("data-theme", mode); // update localstorage
+        documentElement.setAttribute("data-theme", mode); // update dom element
     };
+
+    // use theme on render
+    useEffect(() => {
+        if (dataTheme) {
+            documentElement.setAttribute("data-theme", dataTheme);
+        }
+    }, [dataTheme]);
 
     return (
         <nav>
@@ -40,7 +52,7 @@ export default function Nav() {
                 Experience
             </a>
             <div className="icon" onClick={toggleDarkMode}>
-                {documentElement.getAttribute("data-theme") == "light" ? (
+                {dataTheme == "light" ? (
                     <FiSun size={25} />
                 ) : (
                     <FiMoon size={25} />
