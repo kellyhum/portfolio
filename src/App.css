@@ -3,12 +3,14 @@ html[data-theme="light"] {
     --bg: #fff;
     --font: #252424;
     --accent: #fc6b03;
+    --tech-tags: #f9c19a;
 }
 
 html[data-theme="dark"] {
     --bg: #252424;
     --font: #faf9f6;
-    --accent: #fc6b03;
+    --accent: #03fce7;
+    --tech-tags: #70aab5;
 }
 
 * {
@@ -60,7 +62,8 @@ div {
 }
 
 section {
-    margin-top: 2rem;
+    margin-top: 8rem;
+    height: 80%;
 }
 
 h1 {
@@ -84,9 +87,29 @@ a {
     width: 100%;
 }
 
+h3 {
+    font-size: 1.3em;
+}
+
 .project {
     outline: var(--font) solid 2px;
     padding: 2rem;
-    width: 15rem;
-    height: 15rem;
+    width: 45%;
+}
+
+.project:hover {
+    outline: var(--accent) solid 2px;
+    cursor: pointer;
+}
+
+.project-tech-container {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-tech-tag {
+    padding: 0.5rem;
+    background-color: var(--tech-tags);
+    width: fit-content;
 }
