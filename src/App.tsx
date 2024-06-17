@@ -20,12 +20,12 @@ export default function App() {
             </section>
 
             <section id="about">
-                <Heading title="About" description="about section passage" />
+                <Heading title="About" description="about here" />
             </section>
 
             <section id="projects">
                 <Heading
-                    title="projects"
+                    title="Projects"
                     description="project section passage"
                 />
                 <div id="project-container">
@@ -42,6 +42,11 @@ export default function App() {
             <section id="experience">
                 <Heading title="exp" description="experience section passage" />
             </section>
+
+            <footer>
+                <hr />
+                <div>Built with 🍬🥲</div>
+            </footer>
         </>
     );
 }
