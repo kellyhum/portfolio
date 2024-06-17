@@ -1,6 +1,10 @@
 import Nav from "./components/Nav";
 import Heading from "./components/Heading";
+import Project from "./components/Project";
+
 import heroData from "./data/hero.json";
+import projectData from "./data/projects.json";
+
 import "./App.css";
 
 export default function App() {
@@ -16,7 +20,7 @@ export default function App() {
             </section>
 
             <section id="about">
-                <Heading title="about" description="about section passage" />
+                <Heading title="About" description="about section passage" />
             </section>
 
             <section id="projects">
@@ -24,6 +28,15 @@ export default function App() {
                     title="projects"
                     description="project section passage"
                 />
+                <div id="project-container">
+                    {projectData.projects.map((project) => (
+                        <Project
+                            title={project.name}
+                            tech={project.tech}
+                            desc={project.desc}
+                        />
+                    ))}
+                </div>
             </section>
 
             <section id="experience">
