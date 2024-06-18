@@ -2,13 +2,16 @@
 html[data-theme="light"] {
     --bg: #fff;
     --font: #252424;
+    --shadow: #2524241c;
     --accent: #fc6b03;
+    --accent-light: #fc6b0315;
     --tech-tags: #f9c19a;
 }
 
 html[data-theme="dark"] {
     --bg: #252424;
     --font: #faf9f6;
+    --shadow: #faf9f62d;
     --accent: #03fce7;
     --tech-tags: #70aab5;
 }
@@ -92,13 +95,13 @@ h3 {
 }
 
 .project {
-    outline: var(--font) solid 2px;
+    box-shadow: 0px 2px 18px 2px var(--shadow);
+    border-radius: 8px;
     padding: 2rem;
     width: 45%;
 }
 
 .project:hover {
-    outline: var(--accent) solid 2px;
     cursor: pointer;
 }
 
@@ -112,4 +115,20 @@ h3 {
     padding: 0.5rem;
     background-color: var(--tech-tags);
     width: fit-content;
+    border-radius: 5px;
+}
+
+footer {
+    height: 3rem;
+    width: 100%;
+}
+
+footer > div {
+    margin-top: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer > div > span {
+    font-style: italic;
 }
