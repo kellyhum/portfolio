@@ -41,6 +41,10 @@ body {
     display: flex;
 }
 
+.icon:hover {
+    color: var(--accent);
+}
+
 /* Navigation */
 
 nav {
@@ -70,6 +74,11 @@ div {
 
 section {
     margin-top: 8rem;
+}
+
+.hero-desc {
+    margin-bottom: 2rem;
+    line-height: 1.5em;
 }
 
 h1 {
