@@ -19,10 +19,6 @@ export default function App() {
                 />
             </section>
 
-            <section id="about">
-                <Heading title="About" description="about here" />
-            </section>
-
             <section id="projects">
                 <Heading
                     title="Projects"
@@ -45,7 +41,9 @@ export default function App() {
 
             <footer>
                 <hr />
-                <div>Built with 🍬🥲</div>
+                <div>
+                    <span>Built with</span> 🍬🥲
+                </div>
             </footer>
         </>
     );
