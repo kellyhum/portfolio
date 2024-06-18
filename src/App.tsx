@@ -21,8 +21,8 @@ export default function App() {
 
             <section id="projects">
                 <Heading
-                    title="Projects"
-                    description="project section passage"
+                    title={projectData.title}
+                    description={projectData.description}
                 />
                 <div id="project-container">
                     {projectData.projects.map((project) => (
