@@ -16,6 +16,9 @@ export default function App() {
                 <Heading
                     title={heroData.title}
                     description={heroData.description}
+                    hero={true}
+                    past={heroData.past}
+                    present={heroData.present}
                 />
             </section>
 
