@@ -33,7 +33,7 @@ body,
 }
 
 body {
-    padding: 2rem 15rem;
+    padding: 0 15rem 2rem 15rem;
 }
 
 .icon {
@@ -44,10 +44,14 @@ body {
 /* Navigation */
 
 nav {
+    padding: 1rem 0rem;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 2rem;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
 }
 
 a {
@@ -66,7 +70,6 @@ div {
 
 section {
     margin-top: 8rem;
-    height: 80%;
 }
 
 h1 {
