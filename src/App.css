@@ -1,19 +1,10 @@
-:root,
-html[data-theme="light"] {
+:root {
     --bg: #fff;
     --font: #252424;
     --shadow: #2524241c;
     --accent: #fc6b03;
     --accent-light: #fc6b0315;
     --tech-tags: #f9c19a;
-}
-
-html[data-theme="dark"] {
-    --bg: #252424;
-    --font: #faf9f6;
-    --shadow: #faf9f62d;
-    --accent: #03fce7;
-    --tech-tags: #70aab5;
 }
 
 * {
@@ -27,8 +18,7 @@ body,
 #root {
     width: 100%;
     height: 100%;
-    scroll-behavior: smooth;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lato", sans-serif;
     background-color: var(--bg);
 }
 
@@ -85,6 +75,8 @@ h1 {
     margin-top: 2rem;
     font-size: 2.25em;
     margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
 }
 
 body,
