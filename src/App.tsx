@@ -1,8 +1,6 @@
 import Nav from "./components/Nav";
-import Heading from "./components/Heading";
 import Project from "./components/Project";
 
-import heroData from "./data/hero.json";
 import projectData from "./data/projects.json";
 
 import "./App.css";
@@ -13,20 +11,10 @@ export default function App() {
             <Nav />
 
             <section id="hero">
-                <Heading
-                    title={heroData.title}
-                    description={heroData.description}
-                    hero={true}
-                    past={heroData.past}
-                    present={heroData.present}
-                />
+                <h1>Hi, I'm Kelly</h1>
             </section>
 
             <section id="projects">
-                <Heading
-                    title={projectData.title}
-                    description={projectData.description}
-                />
                 <div id="project-container">
                     {projectData.projects.map((project) => (
                         <Project
@@ -38,9 +26,7 @@ export default function App() {
                 </div>
             </section>
 
-            <section id="experience">
-                <Heading title="exp" description="experience section passage" />
-            </section>
+            <section id="experience"></section>
 
             <footer>
                 <hr />
