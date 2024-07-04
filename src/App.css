@@ -66,15 +66,19 @@ h1 {
 }
 
 #hero {
-    background-color: var(--font);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--font) url("./assets/hero_ellipse.png") no-repeat center;
 }
 
 #hero > h1 {
     color: var(--bg);
+}
+
+svg {
+    position: absolute;
 }
 
 #about {
@@ -129,6 +133,7 @@ a {
 .project-tech-tag {
     padding: 0.5rem;
     background-color: var(--tech-tags);
+    color: var(--bg-lighter);
     width: fit-content;
     border-radius: 5px;
 }
