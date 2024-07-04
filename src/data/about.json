@@ -1,0 +1,16 @@
+{
+    "about": [
+        {
+            "title": "Currently:",
+            "desc": ["bullet 1", "bullet 2"]
+        },
+        {
+            "title": "In past eras...",
+            "desc": ["bullet past 1", "bullet past 2"]
+        },
+        {
+            "title": "Future (!)",
+            "desc": ["bullet future 1", "bullet future 2"]
+        }
+    ]
+}
