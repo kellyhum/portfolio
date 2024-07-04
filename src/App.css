@@ -1,9 +1,8 @@
 :root {
-    --bg: #fff;
-    --font: #252424;
-    --shadow: #2524241c;
+    --bg: #252424;
+    --bg-lighter: #333232;
+    --font: #fff;
     --accent: #fc6b03;
-    --accent-light: #fc6b0315;
     --tech-tags: #f9c19a;
 }
 
@@ -20,36 +19,33 @@ body,
     height: 100%;
     font-family: "Lato", sans-serif;
     background-color: var(--bg);
+    color: var(--font);
+    scroll-behavior: smooth;
 }
 
-body {
-    padding: 0 15rem 2rem 15rem;
-}
-
-.icon {
-    cursor: pointer;
-    display: flex;
-}
-
-.icon:hover {
-    color: var(--accent);
+section {
+    padding: 5rem 10rem;
 }
 
 /* Navigation */
 
 nav {
-    padding: 1rem 0rem;
+    padding: 1rem 10rem;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 2rem;
-    position: sticky;
+
+    position: fixed;
+    width: 100%;
     top: 0;
+
     backdrop-filter: blur(5px);
+    background-color: var(--font);
 }
 
 a {
-    color: var(--font);
+    color: var(--bg);
     font-style: italic;
 }
 
@@ -62,21 +58,40 @@ div {
     color: var(--font);
 }
 
-section {
-    margin-top: 8rem;
-}
-
-.hero-desc {
-    margin-bottom: 2rem;
-    line-height: 1.5em;
-}
-
 h1 {
     margin-top: 2rem;
     font-size: 2.25em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-family: "Playfair Display", serif;
-    text-align: center;
+}
+
+#hero {
+    background-color: var(--font);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero > h1 {
+    color: var(--bg);
+}
+
+#about {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-column {
+    flex: 1;
+}
+
+ul {
+    line-height: 1.4;
+}
+
+li {
+    list-style-position: inside;
 }
 
 body,
@@ -90,19 +105,15 @@ a {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 3rem;
     width: 100%;
 }
 
-h3 {
-    font-size: 1.3em;
-}
-
 .project {
-    box-shadow: 0px 2px 18px 2px var(--shadow);
-    border-radius: 8px;
+    background-color: var(--bg-lighter);
     padding: 2rem;
-    width: 45%;
+    /* width: 45%; */
+    flex: 1;
 }
 
 .project:hover {
