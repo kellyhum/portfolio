@@ -12,5 +12,10 @@
             "title": "Future (!)",
             "desc": ["bullet future 1", "bullet future 2"]
         }
+    ],
+    "hero-bullets": [
+        "studying CS @ UBC",
+        "a language learner",
+        "a TypeScript enthusiast"
     ]
 }
