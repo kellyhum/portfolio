@@ -14,8 +14,26 @@
         }
     ],
     "hero-bullets": [
-        "studying CS @ UBC",
-        "a language learner",
-        "a TypeScript enthusiast"
+        {
+            "text": "studying CS @ UBC",
+            "x": 550,
+            "y": 400,
+            "ellipseX": 120,
+            "ellipseY": 50
+        },
+        {
+            "text": "a TypeScript enthusiast",
+            "x": 1350,
+            "y": 100,
+            "ellipseX": 140,
+            "ellipseY": 50
+        },
+        {
+            "text": "a language learner",
+            "x": 1050,
+            "y": 600,
+            "ellipseX": 110,
+            "ellipseY": 50
+        }
     ]
 }
