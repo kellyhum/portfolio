@@ -22,21 +22,6 @@ export default function App() {
         }).appendTo(domElement.current);
         two.renderer.setSize(1800, 800); // change the two js screen size to 1500 by 900 px
 
-        // how to explicitly state two js type?
-        let heroBullets = [];
-
-        for (let i: number = 0; i < aboutData["hero-bullets"].length; i++) {
-            let defaultBulletEllipse = two.makeEllipse(
-                two.width / 2,
-                two.height / 2,
-                60,
-                40
-            );
-            defaultBulletEllipse.stroke = "#000";
-            defaultBulletEllipse.fill = "transparent";
-            heroBullets.push(defaultBulletEllipse);
-        }
-
         let innerOrbit = two.makeEllipse(
             two.width / 2,
             two.height / 2,
@@ -54,6 +39,32 @@ export default function App() {
         );
         outerOrbit.stroke = "#000";
         outerOrbit.fill = "transparent";
+
+        for (let i: number = 0; i < aboutData["hero-bullets"].length; i++) {
+            let fontStyles = {
+                size: 22,
+                family: "Lato",
+            };
+
+            let ellipseShape = two.makeEllipse(
+                aboutData["hero-bullets"][i].x,
+                aboutData["hero-bullets"][i].y,
+                aboutData["hero-bullets"][i].ellipseX,
+                aboutData["hero-bullets"][i].ellipseY
+            );
+            ellipseShape.fill = "#fff";
+            ellipseShape.stroke = "#000";
+
+            let ellipseText = two.makeText(
+                aboutData["hero-bullets"][i].text,
+                aboutData["hero-bullets"][i].x,
+                aboutData["hero-bullets"][i].y,
+                fontStyles
+            );
+
+            let bulletGroup = two.makeGroup();
+            bulletGroup.add(ellipseShape, ellipseText);
+        }
 
         two.update();
     }
