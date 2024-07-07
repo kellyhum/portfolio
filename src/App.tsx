@@ -42,7 +42,7 @@ export default function App() {
 
         for (let i: number = 0; i < aboutData["hero-bullets"].length; i++) {
             let fontStyles = {
-                size: 22,
+                size: 18,
                 family: "Lato",
             };
 
