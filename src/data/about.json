@@ -1,23 +1,37 @@
 {
     "about": [
         {
-            "title": "Currently:",
-            "desc": ["bullet 1", "bullet 2"]
+            "title": "In past eras I...",
+            "desc": [
+                "planned and ran a hackathon for a youth-led nonprofit",
+                "led an AI and linguistics research team to write a research paper and develop a Tensorflow model",
+                "raised $1000+ in sponsorships for a school club",
+                "watched all 7 Mission Impossible movies"
+            ]
         },
         {
-            "title": "In past eras...",
-            "desc": ["bullet past 1", "bullet past 2"]
+            "title": "Currently:",
+            "desc": [
+                "studying CS + Korean at UBC",
+                "planning Western Canada's largest hackathons as part of the nwPlus team",
+                "teaching kids how to code at UTG Academy",
+                "exploring biotech, fintech, and climate-tech related ideas"
+            ]
         },
         {
             "title": "Future (!)",
-            "desc": ["bullet future 1", "bullet future 2"]
+            "desc": [
+                "become fluent in Chinese (so that I can read my favourite books)",
+                "dive deeper into CS and bio/finance/climate intersections via internships and/or research",
+                "travel the globe (cliche, I know)"
+            ]
         }
     ],
     "hero-bullets": [
         {
-            "text": "studying CS @ UBC",
-            "x": 550,
-            "y": 400,
+            "text": "studying CS + Korean at UBC",
+            "x": 650,
+            "y": 235,
             "ellipseX": 120,
             "ellipseY": 50
         },
@@ -25,15 +39,15 @@
             "text": "a TypeScript enthusiast",
             "x": 1350,
             "y": 100,
-            "ellipseX": 140,
-            "ellipseY": 50
+            "ellipseX": 120,
+            "ellipseY": 40
         },
         {
             "text": "a language learner",
-            "x": 1050,
-            "y": 600,
-            "ellipseX": 110,
-            "ellipseY": 50
+            "x": 1175,
+            "y": 550,
+            "ellipseX": 100,
+            "ellipseY": 40
         }
     ]
 }
