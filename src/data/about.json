@@ -1,15 +1,6 @@
 {
     "about": [
         {
-            "title": "In past eras I...",
-            "desc": [
-                "planned and ran a hackathon for a youth-led nonprofit",
-                "led an AI and linguistics research team to write a research paper and develop a Tensorflow model",
-                "raised $1000+ in sponsorships for a school club",
-                "watched all 7 Mission Impossible movies"
-            ]
-        },
-        {
             "title": "Currently:",
             "desc": [
                 "studying CS + Korean at UBC",
@@ -19,35 +10,13 @@
             ]
         },
         {
-            "title": "Future (!)",
+            "title": "In the past...",
             "desc": [
-                "become fluent in Chinese (so that I can read my favourite books)",
-                "dive deeper into CS and bio/finance/climate intersections via internships and/or research",
-                "travel the globe (cliche, I know)"
+                "planned and ran a hackathon for a youth-led nonprofit",
+                "led an AI and linguistics research team to write a research paper and develop a Tensorflow model",
+                "raised $1000+ in sponsorships for a school club",
+                "watched all 7 Mission Impossible movies"
             ]
-        }
-    ],
-    "hero-bullets": [
-        {
-            "text": "studying CS + Korean at UBC",
-            "x": 650,
-            "y": 235,
-            "ellipseX": 120,
-            "ellipseY": 50
-        },
-        {
-            "text": "a TypeScript enthusiast",
-            "x": 1350,
-            "y": 100,
-            "ellipseX": 120,
-            "ellipseY": 40
-        },
-        {
-            "text": "a language learner",
-            "x": 1175,
-            "y": 550,
-            "ellipseX": 100,
-            "ellipseY": 40
         }
     ]
 }
