@@ -1,7 +1,7 @@
 :root {
-    --bg: #252424;
-    --bg-lighter: #333232;
-    --font: #fff;
+    --dark: #1e1e1e;
+    --dark-lighter: rgb(69, 68, 68);
+    --light: #fff;
     --accent: #fc6b03;
     --tech-tags: #f9c19a;
 }
@@ -11,9 +11,15 @@
     margin: 0;
     padding: 0;
 }
+
 html {
     height: 100%;
     width: 100%;
+    font-family: "Lato", sans-serif;
+    color: var(--font);
+    scroll-behavior: smooth;
+    padding: 0 12vw;
+    line-height: 175%;
 }
 
 body {
@@ -22,32 +28,38 @@ body {
     font-size: 1.1em;
 }
 
-html {
-    font-family: "Lato", sans-serif;
-    background-color: var(--bg);
-    color: var(--font);
-    scroll-behavior: smooth;
+h1 {
+    margin-top: 2rem;
+    font-size: 2.25em;
+    margin-bottom: 1.5rem;
+    font-family: "Playfair Display", serif;
 }
 
-section {
-    padding: 5vh 10vw;
+#root {
+    position: relative; /* so that nav can be positioned relative to this */
+}
+
+/* Hero */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
 
 /* Navigation */
-
 nav {
-    padding: 1vh 10vw;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 2rem;
 
-    position: fixed;
-    width: 100%;
-    top: 0;
+    position: absolute;
+    right: 0;
 
     backdrop-filter: blur(5px);
-    background-color: var(--font);
+    margin-top: 2rem;
 }
 
 a {
@@ -59,101 +71,17 @@ a:hover {
     color: var(--accent);
 }
 
-h1,
-div {
-    color: var(--font);
-}
-
-h1 {
-    margin-top: 2rem;
-    font-size: 2.25em;
-    margin-bottom: 1.5rem;
-    font-family: "Playfair Display", serif;
-}
-
-#hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--font) url("./assets/hero_ellipse.png") no-repeat center;
-}
-
-#hero > h1 {
-    color: var(--bg);
-}
-
-svg {
-    position: absolute;
-}
-
-#about {
-    display: flex;
-    gap: 3vw;
-}
-
-.about-column {
-    flex: 1;
-}
-
+/* General */
 li {
-    margin-left: 1em;
+    list-style-position: inside;
 }
 
-li:not(:last-child) {
-    margin-bottom: 1.5vh;
-}
-
-body,
-h1,
-div,
-a {
-    transition: all ease-in-out 0.1s;
-}
-
-#project-container {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    width: 100%;
-}
-
-.project {
-    background-color: var(--bg-lighter);
-    padding: 2rem;
-    flex: 1;
-}
-
-.project:hover {
-    cursor: pointer;
-}
-
-.project-tech-container {
-    margin: 1rem 0 2rem 0;
-    display: flex;
-    gap: 1rem;
-}
-
-.project-tech-tag {
-    padding: 0.5rem;
-    background-color: var(--tech-tags);
-    color: var(--bg-lighter);
-    width: fit-content;
-    border-radius: 5px;
-}
-
+/* Footer */
 footer {
-    height: 3rem;
     width: 100%;
 }
 
 footer > div {
     margin-top: 0.5rem;
-    text-align: center;
-    vertical-align: middle;
-}
-
-footer > div > span {
     font-style: italic;
 }
