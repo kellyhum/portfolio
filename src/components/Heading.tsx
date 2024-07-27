@@ -1,9 +1,9 @@
-type AboutSection = {
+type Heading = {
     title: string;
     desc: string[];
 };
 
-const AboutSection = ({ title, desc }: AboutSection) => {
+const Heading = ({ title, desc }: Heading) => {
     return (
         <div className="about-column">
             <h1>{title}</h1>
@@ -16,4 +16,4 @@ const AboutSection = ({ title, desc }: AboutSection) => {
     );
 };
 
-export default AboutSection;
+export default Heading;
