@@ -1,9 +1,12 @@
 :root {
     --dark: #1e1e1e;
-    --dark-lighter: rgb(69, 68, 68);
+    --dark-lighter: #909090;
+    --box-shadow: #1e1e1e27;
     --light: #fff;
     --accent: #fc6b03;
-    --tech-tags: #f9c19a;
+    --default-tag: #f9c19a;
+    --purple: #f5dfff;
+    --blue: #d1f7f7;
 }
 
 * {
@@ -76,8 +79,42 @@ li {
     list-style-position: inside;
 }
 
+.tag {
+    width: fit-content;
+    padding: 0 1rem;
+}
+
+.tag-default {
+    background-color: var(--default-tag);
+}
+
+.tag-blue {
+    background-color: var(--blue);
+}
+
+.tag-purple {
+    background-color: var(--purple);
+}
+
+/* Accordion */
+.accordion-container {
+    padding: 1rem;
+    box-shadow: 5px 10px 100px var(--box-shadow);
+}
+
+.accordion-visible {
+    display: flex;
+    gap: 2rem;
+}
+
+.accordion-visible div:last-child {
+    color: var(--dark-lighter);
+    margin-left: auto;
+}
+
 /* Footer */
 footer {
+    margin-top: 5rem;
     width: 100%;
 }
 
