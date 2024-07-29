@@ -1,8 +1,10 @@
 import Nav from "./components/Nav";
 import Heading from "./components/Heading";
+import AccordionItem from "./components/AccordionItem";
 
 import aboutData from "./data/about.json";
 import heroData from "./data/hero.json";
+import expData from "./data/experience.json";
 
 import "./App.css";
 
@@ -51,6 +53,18 @@ export default function App() {
                 ))}
             </section>
 
+            <section id="experience">
+                <h1>Experience</h1>
+                {expData.experience.map((exp) => (
+                    <AccordionItem
+                        title={exp.title}
+                        tag={exp.tag}
+                        date={exp.date}
+                        desc={exp.desc}
+                    />
+                ))}
+            </section>
+
             <section id="projects">
                 {/* <h1>Projects</h1> */}
                 <div id="project-container">
@@ -63,8 +77,6 @@ export default function App() {
                     ))} */}
                 </div>
             </section>
-
-            <section id="experience"></section>
 
             <footer>
                 <hr />
