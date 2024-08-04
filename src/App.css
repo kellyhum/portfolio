@@ -4,7 +4,7 @@
     --box-shadow: #1e1e1e27;
     --light: #fff;
     --accent: #fc6b03;
-    --default-tag: #f9c19a;
+    --default-tag: #ffe7b9;
     --purple: #f5dfff;
     --blue: #d1f7f7;
 }
@@ -29,6 +29,7 @@ body {
     min-height: 100%;
     min-width: 100%;
     font-size: 1.1em;
+    text-underline-offset: 2px;
 }
 
 h1 {
@@ -40,15 +41,6 @@ h1 {
 
 #root {
     position: relative; /* so that nav can be positioned relative to this */
-}
-
-/* Hero */
-#hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
 }
 
 /* Navigation */
@@ -72,6 +64,36 @@ a {
 
 a:hover {
     color: var(--accent);
+}
+
+/* Hero */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+mark[data-name="lab"] {
+    background-color: var(--blue);
+}
+
+mark[data-name="nw"] {
+    background-color: var(--default-tag);
+}
+
+mark[data-name="dojo"] {
+    background-color: var(--purple);
+}
+
+mark {
+    padding: 0.2rem;
+}
+
+mark:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* General */
