@@ -1,3 +1,5 @@
+import parse from "html-react-parser";
+
 import Nav from "./components/Nav";
 import Heading from "./components/Heading";
 import AccordionItem from "./components/AccordionItem";
@@ -13,11 +15,6 @@ import { useRef } from "react";
 export default function App() {
     const domElement = useRef() as React.MutableRefObject<HTMLElement>;
 
-    // format data
-    let formattedReads = heroData.currents["current-reads"]
-        .map((book) => `${book.title} (${book.author})`)
-        .join(", ");
-
     return (
         <>
             <Nav />
@@ -28,21 +25,23 @@ export default function App() {
                     <p>{heroData["one-liner"]}</p>
                 </div>
 
-                <div>
-                    {heroData.paragraph.map((sentence) => (
-                        <>
-                            <p>{sentence}</p>
-                            <br />
-                        </>
-                    ))}
-                </div>
+                <div>{parse(heroData.paragraph)}</div>
 
                 <div>
-                    <p>Current reads: {formattedReads}</p>
-                    <p>Current goal: {heroData.currents["current-goal"]}</p>
                     <p>
-                        ----&gt; If any of the above sparks your interest, feel
-                        free to reach out!
+                        Current reads:{" "}
+                        {heroData.currents["current-reads"].map((book) => (
+                            <li>{parse(book)}</li>
+                        ))}
+                    </p>
+                    <p>
+                        Currently pondering:
+                        <li>{heroData.currents["current-question"]}</li>
+                    </p>
+                    <br />
+                    <p>
+                        If any of the above sparks your interest, feel free to
+                        reach out!
                     </p>
                 </div>
             </section>
