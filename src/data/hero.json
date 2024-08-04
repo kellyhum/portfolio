@@ -1,14 +1,13 @@
 {
     "one-liner": "I’m a biotechnology enthusiast, software tinkerer, and second-year computer science student at UBC.",
-    "paragraph": [
-        "I’m curious about ophthalmology, biosensors, and medical devices - how can we develop treatments for retinal diseases, and how can non-invasive technologies help detect illness? Currently pursuing these interests via research and organizing DojoGrants at Nucleate Dojo.",
-        "Other areas of exploration include hackathon-planning (nwPlus), software development, and language learning."
-    ],
+
+    "paragraph": "<p>I’m curious about ophthalmology, biosensors, and medical devices - how can we develop treatments for retinal diseases, and how can non-invasive technologies help detect illness? Currently pursuing these interests via research at the <mark data-name='lab'>Matsubara Lab</mark> and organizing DojoGrants at <mark data-name='dojo'>Nucleate Dojo.</mark></p> <br /> <p>Other areas of exploration include hackathon-planning <mark data-name='nw'>(nwPlus)</mark>, software development, and language learning.</p>",
+
     "currents": {
         "current-reads": [
-            { "title": "Persuasion", "author": "Jane Austen" },
-            { "title": "the Mistborn Series", "author": "Brandon Sanderson" }
+            "<i>When Breath Becomes Air</i> by Paul Kalanithi",
+            "<i>The Mistborn Series</i> by Brandon Sanderson"
         ],
-        "current-goal": "to finally finish a song on the guitar :)"
+        "current-question": "How does one critique a book (fiction)?"
     }
 }
