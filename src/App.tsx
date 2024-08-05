@@ -31,7 +31,9 @@ export default function App() {
                     <p>
                         Current reads:{" "}
                         {heroData.currents["current-reads"].map((book) => (
-                            <li>{parse(book)}</li>
+                            <li>
+                                <i>{book.title}</i> by {book.name}
+                            </li>
                         ))}
                     </p>
                     <p>

@@ -5,8 +5,11 @@
 
     "currents": {
         "current-reads": [
-            "<i>When Breath Becomes Air</i> by Paul Kalanithi",
-            "<i>The Mistborn Series</i> by Brandon Sanderson"
+            { "title": "When Breath Becomes Air", "name": "Paul Kalanithi" },
+            {
+                "title": "The Mistborn Series",
+                "name": "Brandon Sanderson"
+            }
         ],
         "current-question": "How does one critique a book (fiction)?"
     }
