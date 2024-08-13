@@ -1,7 +1,6 @@
 :root {
     --dark: #1e1e1e;
     --dark-lighter: #909090;
-    --box-shadow: #1e1e1e27;
     --light: #fff;
     --accent: #fc6b03;
     --default-tag: #ffe7b9;
@@ -73,6 +72,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 0; /*to counterract the margin-bottom applied to all section elements*/
 }
 
 mark[data-name="lab"] {
@@ -97,12 +97,18 @@ mark:hover {
 }
 
 /* General */
+section {
+    margin-bottom: 15rem;
+}
+
 li {
     list-style-position: inside;
+    margin-bottom: 0.3rem;
 }
 
 .tag {
     width: fit-content;
+    height: fit-content;
     padding: 0 1rem;
 }
 
@@ -121,17 +127,36 @@ li {
 /* Accordion */
 .accordion-container {
     padding: 1rem;
-    box-shadow: 5px 10px 100px var(--box-shadow);
+    border-left: 8px solid transparent;
+    transition: 0.1s ease-in;
+}
+
+.invisible-is-open {
+    border-left: 8px solid var(--blue);
+}
+
+.accordion-container:hover {
+    border-left: 8px solid var(--blue);
+    cursor: pointer;
 }
 
 .accordion-visible {
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
-.accordion-visible div:last-child {
+.accordion-date {
+    margin-top: 0.25rem;
     color: var(--dark-lighter);
+}
+
+.accordion-icon {
     margin-left: auto;
+}
+
+.accordion-invisible {
+    margin-top: 1rem;
 }
 
 /* Footer */
@@ -141,6 +166,6 @@ footer {
 }
 
 footer > div {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
     font-style: italic;
 }
