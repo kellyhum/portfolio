@@ -8,6 +8,8 @@ import aboutData from "./data/about.json";
 import heroData from "./data/hero.json";
 import expData from "./data/experience.json";
 
+import { IconContext } from "react-icons";
+
 import "./App.css";
 
 import { useRef } from "react";
@@ -56,14 +58,16 @@ export default function App() {
 
             <section id="experience">
                 <h1>Experience</h1>
-                {expData.experience.map((exp) => (
-                    <AccordionItem
-                        title={exp.title}
-                        tag={exp.tag}
-                        date={exp.date}
-                        desc={exp.desc}
-                    />
-                ))}
+                <IconContext.Provider value={{ size: "35px" }}>
+                    {expData.experience.map((exp) => (
+                        <AccordionItem
+                            title={exp.title}
+                            tag={exp.tag}
+                            date={exp.date}
+                            desc={exp.desc}
+                        />
+                    ))}
+                </IconContext.Provider>
             </section>
 
             <section id="projects">
