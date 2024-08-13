@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Tag from "./Tag";
+import { FiPlus } from "react-icons/fi";
 
 type AccordionItemType = {
     title: string;
@@ -8,16 +10,24 @@ type AccordionItemType = {
 };
 
 const AccordionItem = ({ title, tag, date, desc }: AccordionItemType) => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className="accordion-container">
+        <div
+            className={`accordion-container ${open ? "invisible-is-open" : ""}`}
+            onClick={() => setOpen((prevState) => !prevState)}
+        >
             <div className="accordion-visible">
-                <h3>{title}</h3>
+                <div>
+                    <h3>{title}</h3>
+                    <div className="accordion-date">{date}</div>
+                </div>
                 <Tag name={tag} />
 
-                <div>{date}</div>
+                <FiPlus className="accordion-icon" />
             </div>
 
-            <div>{desc}</div>
+            {open && <div className="accordion-invisible">{desc}</div>}
         </div>
     );
 };
