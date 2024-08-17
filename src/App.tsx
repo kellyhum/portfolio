@@ -3,10 +3,12 @@ import parse from "html-react-parser";
 import Nav from "./components/Nav";
 import Heading from "./components/Heading";
 import AccordionItem from "./components/AccordionItem";
+import Project from "./components/Project";
 
 import aboutData from "./data/about.json";
 import heroData from "./data/hero.json";
 import expData from "./data/experience.json";
+import projectData from "./data/projects.json";
 
 import { IconContext } from "react-icons";
 
@@ -71,15 +73,15 @@ export default function App() {
             </section>
 
             <section id="projects">
-                {/* <h1>Projects</h1> */}
+                <h1>Projects</h1>
                 <div id="project-container">
-                    {/* {projectData.projects.map((project) => (
+                    {projectData.projects.map((project) => (
                         <Project
                             title={project.name}
                             tech={project.tech}
                             desc={project.desc}
                         />
-                    ))} */}
+                    ))}
                 </div>
             </section>
 
