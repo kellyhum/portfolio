@@ -1,15 +1,8 @@
 {
-    "title": "Projects",
-    "description": "",
     "projects": [
         {
             "name": "Bookshelf Blend",
             "tech": ["TypeScript", "Firebase"],
-            "desc": "description here"
-        },
-        {
-            "name": "Spotify Wrapped",
-            "tech": ["Python", "Jupyter Notebook"],
             "desc": "description here"
         }
     ]
