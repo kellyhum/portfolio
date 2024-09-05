@@ -1,9 +1,9 @@
-type Heading = {
+type Column = {
     title: string;
     desc: string[];
 };
 
-const Heading = ({ title, desc }: Heading) => {
+const AboutColumn = ({ title, desc }: Column) => {
     return (
         <div className="about-column">
             <h1>{title}</h1>
@@ -16,4 +16,4 @@ const Heading = ({ title, desc }: Heading) => {
     );
 };
 
-export default Heading;
+export default AboutColumn;
