@@ -1,14 +1,14 @@
 import parse from "html-react-parser";
 
 import Nav from "./components/Nav";
-import Heading from "./components/Heading";
+import Heading from "./components/AboutColumn";
 import AccordionItem from "./components/AccordionItem";
-import Project from "./components/Project";
+// import Project from "./components/Project";
 
 import aboutData from "./data/about.json";
 import heroData from "./data/hero.json";
 import expData from "./data/experience.json";
-import projectData from "./data/projects.json";
+// import projectData from "./data/projects.json";
 
 import { IconContext } from "react-icons";
 
@@ -72,7 +72,7 @@ export default function App() {
                 </IconContext.Provider>
             </section>
 
-            <section id="projects">
+            {/* <section id="projects">
                 <h1>Projects</h1>
                 <div id="project-container">
                     {projectData.projects.map((project) => (
@@ -83,7 +83,7 @@ export default function App() {
                         />
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             <footer>
                 <hr />
