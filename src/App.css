@@ -12,6 +12,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: 0.3s all ease-in;
 }
 
 html {
@@ -75,6 +76,8 @@ a:hover {
     margin-bottom: 0; /*to counterract the margin-bottom applied to all section elements*/
 }
 
+/* Hero Highlights */
+/* Code for the marks are found in the JSON */
 mark[data-name="lab"] {
     background-color: var(--blue);
 }
@@ -122,6 +125,18 @@ li {
 
 .tag-purple {
     background-color: var(--purple);
+}
+
+/* About */
+#about {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+#about-column {
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 /* Accordion */
