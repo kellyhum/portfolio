@@ -1,9 +1,0 @@
-{
-    "projects": [
-        {
-            "name": "Bookshelf Blend",
-            "tech": ["TypeScript", "Firebase"],
-            "desc": "description here"
-        }
-    ]
-}
