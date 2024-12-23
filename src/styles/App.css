@@ -7,13 +7,13 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html,
 body,
 #root {
-    padding: 0;
-    margin: 0;
     height: 100%;
 }
 
@@ -22,8 +22,12 @@ body {
     width: 100%;
 }
 
+#root {
+    padding: 0 5rem;
+}
+
 nav {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 #navInnerDiv {
@@ -46,10 +50,29 @@ nav {
     border-radius: 8px;
 }
 
-.mainContainer {
+main {
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        ". b"
+        "a b";
+    column-gap: 10px;
+}
+
+#landingHeading {
+    grid-area: a;
+}
+
+#landingCurrent {
+    grid-area: b;
+}
+
+#landingCurrentCards {
+    display: flex;
+}
+
+.tag {
+    font-family: "Space Mono", serif;
+    text-transform: uppercase;
 }
