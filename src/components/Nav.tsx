@@ -1,9 +1,17 @@
 const Nav = () => {
     return (
         <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
+            <div id="navInnerDiv">
+                <a className="navlink" href="#about">
+                    About
+                </a>
+                <a className="navlink" href="#projects">
+                    Projects
+                </a>
+                <a className="navlink" href="#experience">
+                    Experience
+                </a>
+            </div>
         </nav>
     );
 };
