@@ -1,13 +1,14 @@
 import { Link } from "@chakra-ui/react";
 import { NavLinkType } from "../types";
 
-const NavLink = ({ text }: NavLinkType) => {
+const NavLink = ({ text, hrefLink }: NavLinkType) => {
     return (
         <Link
             variant="plain"
             _hover={{
-                color: "accent",
+                color: "#FBA600",
             }}
+            href={hrefLink}
         >
             {text}
         </Link>
