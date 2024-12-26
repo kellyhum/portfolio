@@ -14,14 +14,14 @@ import {
     AccordionItemTrigger,
     AccordionRoot,
     Flex,
-    Heading,
     Box,
     Separator,
     Link,
-    Stack,
+    VStack,
     Text,
 } from "@chakra-ui/react";
 import { Avatar } from "../src/components/ui/avatar";
+import StyledHeading from "./components/StyledHeading";
 
 const projects: ProjectInterface[] = [
     // array of cards
@@ -55,11 +55,18 @@ const items = [
 
 export default function App() {
     return (
-        <Box px="10" h="100%" height="100vh" width="100vw">
+        <Box
+            px="10"
+            h="100%"
+            height="100vh"
+            width="100vw"
+            fontFamily="mainFont"
+            fontSize="bodySize"
+        >
             <Nav />
 
-            <Box pt={10}>
-                <Heading>Kelly Hum</Heading>
+            <Box pt={10} id="about">
+                <StyledHeading title="Kelly Hum" />
                 <Text>
                     2nd year Computer Science student, aspiring keyboard wizard,
                     and software engineer
@@ -84,8 +91,8 @@ export default function App() {
                 </Flex>
             </Box>
 
-            <Box my={20}>
-                <Heading>Projects</Heading>
+            <Box my={20} id="projects">
+                <StyledHeading title="Projects" />
                 <Flex gap="5">
                     {projects.map((project) => (
                         <Project
@@ -97,22 +104,30 @@ export default function App() {
                 </Flex>
             </Box>
 
-            <Box my={20}>
-                <Heading>Experience</Heading>
+            <Box my={20} id="experience">
+                <StyledHeading title="Experience" />
                 <AccordionRoot collapsible>
                     {items.map((item) => (
                         <AccordionItem value={item.value} mb={2}>
                             <AccordionItemTrigger cursor="pointer">
                                 <Avatar shape="square" src={AvatarImg} />
-                                <Stack gap={1}>
-                                    <Text textAlign="left">{item.title}</Text>
-                                    <Text fontSize="sm" color="fg.muted">
-                                        click to expand
+                                <VStack gap={1}>
+                                    <Text
+                                        textAlign="left"
+                                        fontSize="subHeadingSize"
+                                    >
+                                        {item.title}
                                     </Text>
-                                </Stack>
+                                    <Text
+                                        fontSize="smallestSize"
+                                        color="fg.muted"
+                                    >
+                                        Year/date here
+                                    </Text>
+                                </VStack>
                             </AccordionItemTrigger>
 
-                            <AccordionItemContent>
+                            <AccordionItemContent fontSize="bodySize">
                                 {item.text}
                             </AccordionItemContent>
                         </AccordionItem>

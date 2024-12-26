@@ -4,11 +4,14 @@ export const system = createSystem(defaultConfig, {
     theme: {
         tokens: {
             fonts: {
-                main: { value: "'Inter', serif" },
-                accent: { value: "'Space Mono', serif" },
+                mainFont: { value: "'Inter', serif" },
+                accentFont: { value: "'Space Mono', serif" },
             },
-            colors: {
-                accent: { value: "#FBA600" },
+            fontSizes: {
+                headingSize: { value: "2em" },
+                subHeadingSize: { value: "1.2em" },
+                bodySize: { value: "1em" },
+                smallestSize: { value: "0.8em" },
             },
         },
     },
