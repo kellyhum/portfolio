@@ -1,6 +1,14 @@
 import { createSystem, defaultConfig } from "@chakra-ui/react";
 
 export const system = createSystem(defaultConfig, {
+    globalCss: {
+        "html, body": {
+            margin: 0,
+            padding: 0,
+            color: "gray.300",
+            scrollBehavior: "smooth",
+        },
+    },
     theme: {
         tokens: {
             fonts: {
