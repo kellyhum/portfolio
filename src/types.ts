@@ -1,7 +1,18 @@
 export type ProjectInterface = {
-    tag: string;
     title: string;
     desc: string;
+    link: string;
+    img: string;
+};
+
+export type ExperienceInterface = {
+    value: string;
+    title: string;
+    text: string;
+    org: string;
+    link: string;
+    img: string;
+    date: string;
 };
 
 export type NavLinkType = {
