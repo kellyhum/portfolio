@@ -4,8 +4,7 @@ import Project from "./components/Project";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-// import nwplus from "./assets/nwPlusLogo.png";
-import nwplus from "/nwPlusLogo.png";
+import nwplus from "./assets/nwPlusLogo.png";
 import utg from "./assets/utg.jpeg";
 import testProjImg1 from "./assets/card.jpg";
 import testProjImg2 from "./assets/card2.jpg";
@@ -53,7 +52,7 @@ const experiences: ExperienceInterface[] = [
     {
         value: "a",
         title: "Engagement Coordinator",
-        text: "Planning the retreats, internal socials, that nwPlus is known for! Also supporting some of Western Canada's largest hackathons",
+        text: "Planning the retreats and internal socials that nwPlus is known for! Also supporting some of Western Canada's largest hackathons",
         org: "nwPlus UBC",
         link: "http://nwplus.io/",
         img: nwplus,
