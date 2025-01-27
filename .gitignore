@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ignore images b/c not sure if allowed to share publicly
+src/assets/nwPlusLogo.png
+src/assets/utg.jpeg
