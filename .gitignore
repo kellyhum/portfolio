@@ -26,3 +26,6 @@ dist-ssr
 # ignore images b/c not sure if allowed to share publicly
 src/assets/nwPlusLogo.png
 src/assets/utg.jpeg
+
+# vercel folder
+.vercel
