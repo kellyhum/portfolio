@@ -1,6 +1,6 @@
 # portfolio
 
-finally finished my site :)
+finally finished my site!
 
 #### technologies
 
