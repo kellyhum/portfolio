@@ -1,3 +1,3 @@
-# Portfolio Site
+# portfolio
 
-wip
+built with React, Typescript, and Chakra UI
