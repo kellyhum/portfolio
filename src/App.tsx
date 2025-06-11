@@ -6,9 +6,12 @@ import { FaGithub } from "react-icons/fa";
 
 import nwplus from "./assets/nwPlusLogo.png";
 import utg from "./assets/utg.jpeg";
+import ubc from "./assets/ubc.png";
+import algaecal from "./assets/algaecal.jpeg";
 import testProjImg1 from "./assets/card.jpg";
 import testProjImg2 from "./assets/card2.jpg";
 import testProjImg3 from "./assets/card3.jpg";
+import testProjImg4 from "./assets/card4.jpg";
 
 import { ExperienceInterface, ProjectInterface } from "./types";
 
@@ -29,30 +32,45 @@ import StyledHeading from "./components/StyledHeading";
 const projects: ProjectInterface[] = [
     // array of cards
     {
-        title: "Pokedash",
+        title: "PokéCard Tracker",
         desc: "A Pokémon dashboard to track cards, values, and recommendations",
         link: "https://github.com/kellyhum/pokedashboard",
         img: testProjImg3,
     },
     {
-        title: "Syntaxer",
-        desc: "A grammar checker for paragraphs written in Chinese",
-        link: "https://github.com/kellyhum/syntaxer",
+        title: "Sentence Streak",
+        desc: "A langauge learning word game to support Chinese language learning",
+        link: "https://github.com/kellyhum/sentence-streak",
         img: testProjImg2,
     },
     {
-        title: "QuizLingo",
-        desc: "A platform to generate Duolingo-style quizzes for language learning",
-        link: "https://github.com/kellyhum/quizlingo",
+        title: "PokéDB",
+        desc: "A Pokédex battling app, with a store and Gyms (no link available)",
+        link: "",
         img: testProjImg1,
+    },
+    {
+        title: "Quote Blaster",
+        desc: "A word blasting game - in Java",
+        link: "https://github.com/kellyhum/quote-blaster",
+        img: testProjImg4,
     },
 ];
 
 const experiences: ExperienceInterface[] = [
     {
+        value: "ab",
+        title: "Frontend Software Developer Intern",
+        text: "Developing React components, revamping websites, and learning about vitamins",
+        org: "AlgaeCal",
+        link: "https://www.algaecal.com/",
+        img: algaecal,
+        date: "May 2025 - Present",
+    },
+    {
         value: "a",
-        title: "Engagement Coordinator",
-        text: "Planning the retreats and internal socials that nwPlus is known for! Also supporting some of Western Canada's largest hackathons",
+        title: "Engagement Co-Director",
+        text: "Planning the retreats and internal socials that nwPlus is known for! Also supporting some of Western Canada's largest hackathons. Engagement Coordinator from May 2024 - May 2025",
         org: "nwPlus UBC",
         link: "http://nwplus.io/",
         img: nwplus,
@@ -61,11 +79,20 @@ const experiences: ExperienceInterface[] = [
     {
         value: "b",
         title: "Coding Instructor",
-        text: "Teaching students how to code via games and projects ",
+        text: "Teaching students how to code via games and projects",
         org: "Under the GUI Academy",
-        link: "http://nwplus.io/",
+        link: "https://utgacademy.com/",
         img: utg,
         date: "January 2023 - Present",
+    },
+    {
+        value: "bc",
+        title: "Undergraduate Research Assistant",
+        text: "Data analysis and website updates for an ophthalmology lab",
+        org: "UBC",
+        link: "https://vision.ubc.ca/",
+        img: ubc,
+        date: "August 2024 - Present",
     },
 ];
 
@@ -85,12 +112,12 @@ export default function App() {
             <Box pt={10} id="about">
                 <StyledHeading title="Kelly Hum" />
                 <Text>
-                    2nd year Computer Science student curious about software
-                    engineering and AI safety
+                    3rd year Computer Science student curious about
+                    cybersecurity and software engineering
                 </Text>
                 <Text mt={2}>
                     When I'm not doing any of the above, I'll be reading,
-                    playing Catan, or collecting Pokémon cards
+                    playing board games, or learning the guitar
                 </Text>
 
                 <Flex gap="2" mt="4">
@@ -150,10 +177,7 @@ export default function App() {
                                         >
                                             {item.title}
                                         </Text>
-                                        <Text
-                                            textAlign="left"
-                                            // fontSize="smallestSize"
-                                        >
+                                        <Text textAlign="left">
                                             <Link
                                                 href={item.link}
                                                 target="_blank"
